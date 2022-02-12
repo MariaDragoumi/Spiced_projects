@@ -1,4 +1,3 @@
-
 import random
 import time
 import requests
@@ -16,7 +15,7 @@ class Artist:
     def get_song_links(self):
         response = requests.get(self.url,headers=self.headers).text
         time.sleep(10)
-        soup = BeautifulSoup(response)
+        soup = BeautifulSoup(response, features="lxml")
         links = []
         soup_links = soup.find_all(class_ = self.cls)
         for link in soup_links:
@@ -25,11 +24,12 @@ class Artist:
                 links.append(f'https://www.lyrics.com{ln}')
         return links
     
-    def get_lyrics(self,link):   
+    def get_lyrics(self,link):
+        print(f'Getting lyrics or song in the link: {link}')   
         response = requests.get(link,headers=self.headers)
         time.sleep(10) 
-        if response.status_code == 404: print('blocked')
-        soup = BeautifulSoup(response.text)
+        if response.status_code == 404: print('Status 404')
+        soup = BeautifulSoup(response.text,features="lxml")
         if soup.find(class_ = self.subcls):
             lyrics = soup.find(class_ = self.subcls) #
             return lyrics.text
@@ -37,15 +37,20 @@ class Artist:
             return ['\n']
 
     def get_lyrics_file(self, number_of_samples):
-        # To Do: Check in here for repeated lines, also between songs. Maybe new function
         links = self.get_song_links()
         samples = random.sample(links, number_of_samples)
         for link in samples:
             song_lyrics = self.get_lyrics(link)
-            with open(f'./{self.name}.txt','a') as my_file:
+            with open(f'./lyrics/{self.name}.txt','a') as my_file:
                 my_file.write(f'\n\n{song_lyrics}') 
 
     def read_artist_file(self):
-        with open(f'./{self.name}.txt','r') as my_file:
-            lyrics = my_file.readlines()  
-        return lyrics   
+        with open(f'./lyrics/{self.name}.txt','r') as my_file:
+            lyrics = my_file.read()
+            lyrics = list(set(lyrics.splitlines()))
+            for line in lyrics:
+                if line == '': lyrics.remove(line)
+            #print(f'Sample Data for {self.name} includes {len(lyrics)} unique verses')
+        return lyrics
+
+# EndClass Artist
