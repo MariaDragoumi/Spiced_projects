@@ -1,0 +1,26 @@
+
+
+Model: LogisticRegression()
+
+Rank: 1
+Mean validation score: 0.585 (std: 0.011)
+Parameters: {'tol': 0.005, 'solver': 'saga', 'penalty': 'l2', 'max_iter': 100, 'C': 0.2976351441631313}
+Rank: 2
+Mean validation score: 0.482 (std: 0.001)
+Parameters: {'tol': 0.005, 'solver': 'saga', 'penalty': 'l1', 'max_iter': 100, 'C': 0.026366508987303555}
+Rank: 3
+Mean validation score: 0.458 (std: 0.001)
+Parameters: {'tol': 0.005, 'solver': 'saga', 'penalty': 'l2', 'max_iter': 100, 'C': 0.002335721469090121}
+
+
+Model: MultinomialNB()
+
+Rank: 1
+Mean validation score: 0.549 (std: 0.011)
+Parameters: {'fit_prior': True, 'class_prior': None, 'alpha': 0.0001}
+Rank: 2
+Mean validation score: 0.463 (std: 0.001)
+Parameters: {'fit_prior': True, 'class_prior': None, 'alpha': 206.913808111479}
+Rank: 3
+Mean validation score: 0.453 (std: 0.000)
+Parameters: {'fit_prior': True, 'class_prior': None, 'alpha': 1438.44988828766}
