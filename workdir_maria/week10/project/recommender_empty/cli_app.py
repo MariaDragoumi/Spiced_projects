@@ -6,7 +6,7 @@ user_rating = {
     'star wars': 2
 }
 
-### Terminal recommender:
+# Terminal recommender:
 
 print('>>>> Here are some movie recommendations for you:')
 
