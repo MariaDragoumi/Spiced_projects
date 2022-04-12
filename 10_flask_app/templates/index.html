@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Movie Recommender</title>
+        <link rel="stylesheet" href="static/style.css"/>
+    </head>
+    <body>
+        <h1>VersuS</h1>
+        <h2>Movie Recommender</h2>
+        <hr style="height:2px;border-width:0;margin: 0;color:rgb(30, 66, 145);background-color:rgb(30, 66, 145)" />
+        <form action="/recommendations">
+            <div class="row">
+                <div class="column">
+                    <h3>1.Select movies</h3>
+                        {% for i in range(4) %}
+                        <input
+                            type="text"
+                            name="title"
+                            placeholder="Movie Title"
+                            required
+                            list="movies"
+                        />  
+                        <label class="rating-label">
+                            <input
+                            class="rating"
+                            name="rating"
+                            max="5"
+                            oninput="this.style.setProperty('--value', `${this.valueAsNumber}`)"
+                            step="0.5"
+                            style="--value:2.5"
+                            type="range"
+                            value="2.5">
+                        </label>
+                        {% endfor %}                  
+                </div>
+                <div class="column">
+                        <h3>2.Choose Method </h3>
+                        <input
+                            type="text"
+                            name="method"
+                            placeholder="Method"
+                            required
+                            list="methods"
+                        />
+                        <br /><br />
+                        <p>Available methods</p>
+                            <hr style="height:1.5px;border-width:0;margin-top:0;color:rgb(30, 66, 145);background-color:rgb(30, 66, 145)" />
+                            <p> Random: generates random movies</p>
+                            <p> Most popular: returns current blockbusters</p>
+                            <p> Similar: returns similar movies</p>
+                            <p> NMF: uses input rating as main criteria</p>
+                    </div>
+                    <div class="column">
+                    <div class="pd">
+                        <h3>3.Generate recommendations </h3>
+                        <img src="/static/orange_logo.svg" />
+                        <br /><br />
+                        <button type="submit">Submit</button>
+                    </div>
+                </div>
+            </div>                
+        </form>
+        
+
+
+        <datalist id="methods">
+            {% for method in methods %}
+            <option value="{{method}}"></option>
+            {% endfor %}
+            </datalist>
+        <datalist id="movies">
+            {% for movie in movies %}
+            <option value="{{movie}}"></option>
+            {% endfor %}
+        </datalist>
+    </body>
+</html>
