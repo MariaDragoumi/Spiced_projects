@@ -1,3 +1,4 @@
-# Spiced_projects
+# Data science projects:
 
-In this repo I save the projects I did while studing at Spiced Data Science Bootcamp
+1. [Annimated visualization of the relation between the fertility rate, life expectancy and population.](https://github.com/MariaDragoumi/Spiced_projects/tree/master/01_Data_visualization)
+2. 
