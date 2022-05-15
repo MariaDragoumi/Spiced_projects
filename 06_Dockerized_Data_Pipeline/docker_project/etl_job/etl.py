@@ -9,7 +9,7 @@ from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 # Establish a connection to the MongoDB server
 client = pymongo.MongoClient(host="mongodb", port=27017)
 
-# Select the database you want to use withing the MongoDB server
+# Select the database to use withing the MongoDB server
 db = client.twitter
 docs = db.tweets.find()
 

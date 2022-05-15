@@ -39,7 +39,7 @@ client = tweepy.Client(
 )
 
 #Define user name
-user_name = 'cnnbrk'  # 'elonmusk'
+user_name = 'cnnbrk'  
 
 # Get tweets and insert them in mongoDB collection db.tweets
 tweets = get_tweets(user_name)
