@@ -20,3 +20,18 @@
 5. [News Sentiment Analysis](https://github.com/MariaDragoumi/Spiced_projects/tree/master/06_Dockerized_Data_Pipeline)
 
     ![scikit-learn](https://img.shields.io/badge/scikit--learn-%23F7931E.svg?style=for-the-badge&logo=scikit-learn&logoColor=white)![Pandas](https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white)![NLP](https://img.shields.io/badge/-NLP-darkblue?style=for-the-badge)![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white)![Postgres](https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white)
+    
+6. [Temperature Prediction (Time-Series Analysis)](https://github.com/MariaDragoumi/Spiced_projects/tree/master/07_Temperature_prediction) 
+
+    ![scikit-learn](https://img.shields.io/badge/scikit--learn-%23F7931E.svg?style=for-the-badge&logo=scikit-learn&logoColor=white)![Pandas](https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white)![statsmodels](https://img.shields.io/badge/-statsmodels-blue?style=for-the-badge)
+    
+    
+ 7. [Supermarket costumers analysis](https://github.com/MariaDragoumi/Spiced_projects/tree/master/08_Supermarket_customer_analysis) 
+
+    ![scikit-learn](https://img.shields.io/badge/scikit--learn-%23F7931E.svg?style=for-the-badge&logo=scikit-learn&logoColor=white)![Pandas](https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white)![statsmodels](https://img.shields.io/badge/-Markov_Chain-lightblue?style=for-the-badge)
+    
+ 8. [Movie Recommender](https://github.com/MariaDragoumi/Spiced_projects/tree/master/10_flask_app) 
+
+    ![scikit-learn](https://img.shields.io/badge/scikit--learn-%23F7931E.svg?style=for-the-badge&logo=scikit-learn&logoColor=white)![Pandas](https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white)![Flask](https://img.shields.io/badge/flask-%23000.svg?style=for-the-badge&logo=flask&logoColor=white)
+    
+
